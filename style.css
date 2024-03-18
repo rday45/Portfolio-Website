@@ -1,10 +1,16 @@
 :root {
-    --main-color: #112D4E;
+    --main-color: #0046FF;
+    --second-color: #00A2FF;
+    --third-color: #AD66FE;
+    --timer-seconds: 12s;
+    
 }
 
 body {
     margin: 0;
-    font-family: verdana;
+    font-family: "Tomorrow", Verdana, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 header {
@@ -15,6 +21,7 @@ header {
     padding-top: 25px;
     padding-bottom: 25px;
     width: 100%;
+    animation: background-animation var(--timer-seconds) infinite;
 
 }
 
@@ -22,6 +29,7 @@ header>h1 {
     margin: 0;
     color: white;
     font-size: 1rem;
+
 }
 
 nav {
@@ -38,15 +46,15 @@ nav>a {
 
 }
 
-.landing-page {
-    display: flex;
-    flex-direction: row;
-}
+
 
 .profile-picture {
-    width: 30%;
-    height: 30%;
-    border-radius: 25%;
+    height: 50vh;
+    max-width: 50vw;
+    border-radius: 3%;
+    object-fit: cover;
+    margin-left: 10%;
+
 }
 
 .desktop-tablet-nav-item {
@@ -74,4 +82,36 @@ nav>a {
 
 .desktop-tablet-nav-item:hover::after {
     opacity: 1;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10%;
+    min-height: 80vh;
+    background-color: var(--main-color);
+    animation: background-animation var(--timer-seconds) infinite;
+}
+
+.landing-greeting-container{
+    padding-left: 15%;
+    margin-right: 4%;
+    
+}
+
+
+.landing-greeting {
+    font-size: 3rem;
+    line-height:5rem;
+    color: white;
+
+}
+
+@keyframes background-animation {
+    0% {background-color: var(--main-color);}
+    33% {background-color: var(--second-color);}
+    66% {background-color: var(--third-color);}
+    100% {background-color: var(--main-color);}
+   
 }
