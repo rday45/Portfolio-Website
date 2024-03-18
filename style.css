@@ -12,9 +12,9 @@ header {
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--main-color);
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
 
 }
 
@@ -33,9 +33,8 @@ nav {
 nav>a {
     color: white;
     text-decoration: none;
-    margin-right: 5%;
+    margin-right: 15%;
     font-size: 0.9rem;
-    padding-right: 10%;
 
 }
 
@@ -45,7 +44,34 @@ nav>a {
 }
 
 .profile-picture {
-    width:30%;
+    width: 30%;
     height: 30%;
-    border-radius:25%;
+    border-radius: 25%;
+}
+
+.desktop-tablet-nav-item {
+    transition: 0.3s;
+    position: relative;
+}
+
+.desktop-tablet-nav-item:hover {
+    transform: translateY(-5px);
+}
+
+.desktop-tablet-nav-item::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    bottom: -5px;
+    pointer-events: none;
+    transition: 0.3s;
+
+}
+
+.desktop-tablet-nav-item:hover::after {
+    opacity: 1;
 }
