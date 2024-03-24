@@ -66,6 +66,7 @@ section {
   border-radius: 3%;
   object-fit: cover;
   margin-left: 3rem;
+  box-shadow: -30px -20px white;
 }
 
 .about-me-picture {
@@ -73,7 +74,7 @@ section {
   max-width: 50svw;
   border-radius: 3%;
   object-fit: cover;
-  box-shadow: 80px -20px teal;
+  box-shadow: 80px -20px white;
   animation: box-shadow-animation var(--timer-seconds) infinite;
 }
 
@@ -190,34 +191,30 @@ section {
   }
 }
 
-
 @media screen and (max-width: 1114px) {
-  
-  .landing-greeting{
+  .landing-greeting {
     font-size: 2rem;
     line-height: 2.5rem;
     padding: 2rem 3rem 3rem;
-
   }
 
-  #landing-section{
-    gap:0;
+  #landing-section {
+    gap: 0;
     flex-direction: column;
   }
 
   .profile-picture {
-    margin:0;
-
+    margin: 0;
   }
-  }
-
-  @media screen and (max-width: 600px) {
-.nav-title{
-  display: none;
 }
-.landing-greeting {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding: 2rem 0.5rem 0.5rem;
+
+@media screen and (max-width: 600px) {
+  .nav-title {
+    display: none;
+  }
+  .landing-greeting {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 2rem 0.5rem 0.5rem;
   }
 }
