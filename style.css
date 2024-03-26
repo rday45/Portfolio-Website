@@ -218,3 +218,18 @@ section {
     padding: 2rem 0.5rem 0.5rem;
   }
 }
+
+
+
+
+
+.qualification-logo {
+  width: 30svh;
+  border-radius: 25%;
+}
+
+.qualification-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
