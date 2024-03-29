@@ -5,6 +5,7 @@
   --timer-seconds: 14s;
 }
 
+
 body {
   margin: 0;
   font-family: "Tomorrow", Verdana, sans-serif;
@@ -47,6 +48,10 @@ a:visited {
   color: inherit;
 }
 
+main {
+  min-height: 100svh;
+}
+
 section {
   display: flex;
   flex-direction: row;
@@ -57,6 +62,11 @@ section {
   gap: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -86,6 +96,10 @@ footer {
   object-fit: cover;
   box-shadow: 80px -20px white;
   animation: box-shadow-animation var(--timer-seconds) infinite;
+}
+
+.blog-picture {
+  width: 50svw;
 }
 
 .nav-item {
@@ -307,6 +321,10 @@ of the website relies only on flexbox for responsiveness
 }
 
 @media screen and (max-width: 600px) {
+
+  article {
+    align-items: center;
+  }
 
   .contact-picture {
     width: 30svh;
