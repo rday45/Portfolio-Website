@@ -188,6 +188,9 @@ footer {
   gap: 5rem;
 }
 
+.hidden {
+  display: none;
+}
 
 
 .qualification-logo {
@@ -302,7 +305,10 @@ of the website relies only on flexbox for responsiveness
 */
 
 @media screen and (max-width: 1114px) {
-
+  
+  article {
+    align-items: center;
+  }
 
   .landing-greeting {
     font-size: 2rem;
@@ -317,14 +323,17 @@ of the website relies only on flexbox for responsiveness
 
   .profile-picture {
     margin: 0;
+    
   }
+
+  #experience-picture {
+    display: none;
+      }
 }
 
 @media screen and (max-width: 600px) {
 
-  article {
-    align-items: center;
-  }
+
 
   .contact-picture {
     width: 30svh;
@@ -342,9 +351,7 @@ of the website relies only on flexbox for responsiveness
     padding: 2rem 0.5rem 0.5rem;
   }
 
-  #experience-picture {
-    display: none;
-  }
+
 
 
 }
