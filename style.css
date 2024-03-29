@@ -1,8 +1,8 @@
 :root {
-  --main-color: #0046ff;
+  --first-color: #0046ff;
   --second-color: #00a2ff;
   --third-color: #ad66fe;
-  --timer-seconds: 12s;
+  --timer-seconds: 14s;
 }
 
 body {
@@ -17,19 +17,15 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: var(--first-color);
   min-height: 10svh;
   width: 100%;
   animation: background-animation var(--timer-seconds) infinite;
 }
 
-header > h1 {
+header>h1 {
   color: white;
   font-size: 1rem;
-}
-
-h2 {
-  color: white;
 }
 
 nav {
@@ -38,10 +34,17 @@ nav {
   gap: 2em;
 }
 
-nav > a {
+nav>a {
   color: white;
-  text-decoration: none;
   font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 section {
@@ -54,6 +57,12 @@ section {
   gap: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
 .box-paragraph {
@@ -69,7 +78,8 @@ section {
   box-shadow: -30px -20px white;
 }
 
-.about-me-picture {
+/* class for images designed to be placed on the side of a box of text within a section*/
+.side-picture {
   height: 50svh;
   max-width: 50svw;
   border-radius: 3%;
@@ -78,16 +88,16 @@ section {
   animation: box-shadow-animation var(--timer-seconds) infinite;
 }
 
-.desktop-tablet-nav-item {
+.nav-item {
   transition: 0.3s;
   position: relative;
 }
 
-.desktop-tablet-nav-item:hover {
+.nav-item:hover {
   transform: translateY(-5px);
 }
 
-.desktop-tablet-nav-item::after {
+.nav-item::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -100,7 +110,7 @@ section {
   transition: 0.3s;
 }
 
-.desktop-tablet-nav-item:hover::after {
+.nav-item:hover::after {
   opacity: 1;
 }
 
@@ -115,26 +125,44 @@ section {
   flex-wrap: nowrap;
 }
 
+#contact-section {
+  align-items: center;
+  gap: 5rem;
+}
+
+.call-to-action {
+  font-size: 2.5rem;
+}
+
 .column {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .colorful-background {
-  background-color: var(--main-color);
+  background-color: var(--first-color);
   animation: background-animation var(--timer-seconds) infinite;
+}
+
+.copyright-text {
+  margin: 0
 }
 
 .landing-greeting {
   font-size: 2.5rem;
   line-height: 5rem;
-  color: white;
   max-width: 40rem;
 }
 
-.colorful-heading {
-  color: var(--main-color);
+.colorful-text {
+  color: var(--first-color);
   animation: text-color-animation var(--timer-seconds) infinite;
 }
 
@@ -146,52 +174,122 @@ section {
   gap: 5rem;
 }
 
+
+
+.qualification-logo {
+  width: 30svh;
+  border-radius: 25%;
+}
+
+.qualification-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: dashed;
+  border-color: white;
+  border-width: 0.1rem;
+  border-radius: 5%;
+  padding: 1rem;
+}
+
+
+.white-text {
+  color: white;
+}
+
+
+.resume-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  padding: 0.5rem;
+  border: solid;
+  border-width: 0.1rem;
+  border-radius: 5%;
+  border-color: var(--third-color);
+  margin-top: 4rem;
+  color: var(--third-color);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.resume-link:hover {
+  transform: translate(1rem);
+}
+
+.social-icon {
+  width: 4rem;
+  transition: 0.5s;
+}
+
+.social-icon:hover {
+  transform: translateY(-0.5rem);
+}
+
 @keyframes background-animation {
   0% {
-    background-color: var(--main-color);
+    background-color: var(--first-color);
   }
+
   33% {
     background-color: var(--second-color);
   }
+
   66% {
     background-color: var(--third-color);
   }
+
   100% {
-    background-color: var(--main-color);
+    background-color: var(--first-color);
   }
 }
 
 @keyframes text-color-animation {
   0% {
-    color: var(--main-color);
+    color: var(--first-color);
   }
+
   33% {
     color: var(--second-color);
   }
+
   66% {
     color: var(--third-color);
   }
+
   100% {
-    color: var(--main-color);
+    color: var(--first-color);
   }
 }
 
 @keyframes box-shadow-animation {
   0% {
-    box-shadow: 60px -16px var(--main-color);
+    box-shadow: 60px -16px var(--first-color);
   }
+
   33% {
     box-shadow: 60px -16px var(--second-color);
   }
+
   66% {
     box-shadow: 60px -16px var(--third-color);
   }
+
   100% {
-    box-shadow: 60px -16px var(--main-color);
+    box-shadow: 60px -16px var(--first-color);
   }
 }
 
+
+/* this section of CSS for tablet and mobile viewports. 
+With the exception of the landing section and one image that is hidden in the 'experience' page when in mobille view, the rest
+of the website relies only on flexbox for responsiveness
+*/
+
 @media screen and (max-width: 1114px) {
+
+
   .landing-greeting {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -209,27 +307,26 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-  .nav-title {
+
+  .contact-picture {
+    width: 30svh;
+
+  }
+
+  .header-title {
     display: none;
   }
+
+
   .landing-greeting {
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 2rem 0.5rem 0.5rem;
   }
-}
+
+  #experience-picture {
+    display: none;
+  }
 
 
-
-
-
-.qualification-logo {
-  width: 30svh;
-  border-radius: 25%;
-}
-
-.qualification-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
