@@ -47,6 +47,9 @@ a {
 a:visited {
   color: inherit;
 }
+a:active {
+  color: inherit;
+}
 
 main {
   min-height: 100svh;
