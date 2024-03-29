@@ -42,12 +42,10 @@ nav>a {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 a:visited {
-  color: inherit;
-}
-a:active {
   color: inherit;
 }
 
