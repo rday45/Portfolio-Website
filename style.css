@@ -46,7 +46,7 @@ a {
 }
 
 a:visited {
-  color: inherit;
+  color: white;
 }
 
 main {
@@ -76,6 +76,21 @@ footer {
   padding: 0.5rem;
 }
 
+.blog-subheading {
+  font-size: 1rem;
+}
+
+.blog-paragraph{
+  max-width: 50rem;
+  padding-top: 2rem;
+}
+
+.blog-picture {
+  width: 50svw;
+  padding-top: 2rem;
+}
+
+
 .box-paragraph {
   max-width: 40rem;
 }
@@ -97,10 +112,6 @@ footer {
   object-fit: cover;
   box-shadow: 80px -20px white;
   animation: box-shadow-animation var(--timer-seconds) infinite;
-}
-
-.blog-picture {
-  width: 50svw;
 }
 
 .nav-item {
@@ -186,11 +197,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10rem;
-}
-
-.hidden {
-  display: none;
+  gap: 5rem;
 }
 
 
@@ -211,6 +218,23 @@ footer {
   padding: 1rem;
 }
 
+.blog-card{
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 15rem;
+background-color: var(--first-color);
+animation: background-animation var(--timer-seconds) infinite;
+border-radius: 5%;
+padding: 2rem;
+gap: 1rem;
+}
+
+.blog-card-picture {
+max-width: 100%;
+object-fit: contain;
+border-radius: 5%;
+}
 
 .white-text {
   color: white;
@@ -237,6 +261,10 @@ footer {
   transform: translate(1rem);
 }
 
+.resume-link:visited {
+  color: var(--third-color);
+}
+
 .social-icon {
   width: 4rem;
   transition: 0.5s;
@@ -245,6 +273,7 @@ footer {
 .social-icon:hover {
   transform: translateY(-0.5rem);
 }
+
 
 @keyframes background-animation {
   0% {
@@ -356,6 +385,5 @@ of the website relies only on flexbox for responsiveness
 .card-container {
   gap: 5rem;
 }
-
 
 }
